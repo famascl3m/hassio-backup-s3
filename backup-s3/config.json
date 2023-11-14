@@ -15,6 +15,7 @@
   "schema": {
     "awskey": "str",
     "awssecret": "str",
+    "awsendpoint": "str",
     "bucketname": "str"
   },
   "map": ["backup:rw"]
