@@ -11,7 +11,7 @@ echo $now
 
 aws configure set aws_access_key_id $KEY
 aws configure set aws_secret_access_key $SECRET
-aws configure set --profile default endpoint_url $ENDPOINT
+aws --profile default --endpoint-url $ENDPOINT
 
 aws s3 sync /backup/ s3://$BUCKET/  --delete
 
