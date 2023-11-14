@@ -8,10 +8,11 @@ BUCKET=`jq -r .bucketname /data/options.json`
 now="$(date +'%d/%m/%Y - %H:%M:%S')"
 
 echo $now
+export AWS_ENDPOINT_URL=$ENDPOINT
 
 aws configure set aws_access_key_id $KEY
 aws configure set aws_secret_access_key $SECRET
-aws --profile default --endpoint-url $ENDPOINT
+
 
 aws configure set s3.max_concurrent_requests 1
 
